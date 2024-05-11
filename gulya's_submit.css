@@ -1,0 +1,53 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #eee;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+   color: silver;
+}
+
+/* Headings */
+h1, h2 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2 {
+    margin-top: 40px; 
+}
+
+/* Lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* List Items */
+li {
+    margin-bottom: 20px;
+    background-color: black;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Strong Emphasis */
+li strong {
+    font-weight: bold;
+}
+
+<h2 class="membership-details-heading">Membership Details</h2>
+<section class="membership-details">
+    <!-- Your membership details content goes here -->
+</section>
+
+
+
+
+
+
+

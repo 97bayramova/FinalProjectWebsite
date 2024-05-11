@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+      Final Project
+
+      Author: Ejegul Bayramova
+      Date:  5/10/2024
+
+      Filename: gulya's_membershipa.html
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!-- google fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" >
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" >
+
+<!-- font awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+<link href="gulya's_gym_empire.css" rel="stylesheet" >
+
+<title>Gulya's Gym Empire</title>
+  <link rel="stylesheet" href="gulya's_gym_membership.css" />
+   <script src="gulya's_membershipa.js" defer></script>
+</head>
+
+
+
+<body>
+
+
+<u><h1 style="text-align:center; color:#35d6ed; text-shadow: 2px 2px 2px red">Gulya's Gym Empire</h1></u></br>
+
+
+<table style="width:100%; border-top:10px solid black; border-bottom:10px solid black">
+	<tr >
+                <th><a href="gulya's_gym_empire.html" style="color:black;font-size:15px">Home</a></th>
+		<th><a href="gulya's_about.html" style="color:black;font-size:15px">About Us</a></th>
+		<th><a href="gulya's_location.html" style="color:black;font-size:15px">Location</a></th>
+		<th><a href="gulya's_membershipa.html" style="color:black;font-size:15px">Join Now</a></th>
+		<th><a href="gulya's_trainers.html" style="color:black;font-size:15px">Trainers</a></th>
+	</tr>
+			
+</table>
+<br/>
+<br/>
+
+
+<table border="2" cellpadding="6" style="text-align:center" width="100%";>
+
+
+<h4 style="text-align:center;color:red; font-size:30px">Gym Membership Form</h4>
+
+
+<br>
+
+<p style="text-align:center;color:#35d6ed; font-size:20px">Gulya's Gym Empire is your ultimate fitness destination in New York City. We offer state-of-the-art equipment, expert trainers, and a welcoming atmosphere to help you achieve your fitness goals.</style></p>
+<br>
+
+
+   <section id="accountSection">
+      <form id="accountForm" name="accountForm" method="get" action="gulya's_submit.html" onsubmit="return Validation()">
+        
+        <table id="accountTable">
+
+
+<!-- Full Name -->
+            <tr>
+                <td><label for="name">Name*</label></td>
+                <td><input type="text" name="fullName" id="fullName" placeholder="first and last name" required size="30"></td>
+            </tr>
+            
+            <!-- Email -->
+            <tr>
+                <td><label for="email">Email address:*</label></td>
+                <td><input type="email" name="email" id="emailAddress" size="30" required></td>
+            </tr>
+
+            <!-- Phone Number -->
+            <tr>
+                <td><label for="phone">Phone number:*</label></td>
+                <td><input type="tel" name="phone" id="phoneNumber" size="30" maxlength="10" placeholder="000-000-0000" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s]?\d{4}$" 
+		required ></td>
+            </tr>
+
+
+           <tr>
+              <td>
+                 <label for="membershipType">Membership Type</label>
+                 <select name="membershipType" id="membershipType">
+                    <option value="24.99">Silver ($24.99/month)</option>
+                    <option value="34.99" selected>Gold ($34.99/month)</option>
+                    <option value="44.99">Platinum ($44.99/month)</option>
+                 </select>   
+                 <input type="hidden" id="membershipName" name="membershipName" />
+              </td>
+              <td class="rightA">
+                 <label for="duration">Duration</label>
+                 <select name="duration" id="duration">
+                    <option value="1" selected>1 Month</option>
+                    <option value="3">3 Months</option>
+                    <option value="6">6 Months</option>
+                    <option value="12">12 Months</option>
+                 </select>   
+              </td>                 
+              <td>
+                 <input type="text" name="membershipCost" id="membershipCost" size="10" readonly />
+              </td>
+           </tr>
+           <tr>
+              <td colspan="2"> 
+                 <fieldset>
+                    <legend>Additional Options</legend>
+                    <input type="radio" id="option_0" name="option" value="0" checked /> <label for="option_0">No additional options</label><br>
+                    <input type="radio" id="option_1" name="option" value="19.95" /> <label for="option_1">Personal Trainer ($19.95/session)</label><br>
+                    <input type="radio" id="option_2" name="option" value="29.95" /> <label for="option_2">Nutrition Plan ($29.95/month)</label><br>
+                 </fieldset>
+                 <input type="hidden" id="optionName" name="optionName" />
+              </td>
+              <td>
+                 <input type="text" name="optionCost" id="optionCost" size="10" readonly />
+              </td>
+           </tr>        
+           <tr>
+              <td colspan="2" class="rightA">Subtotal</td>
+              <td class="outcell">
+                 <input type="text" name="subtotal" id="subtotal" size="10" readonly />
+              </td>
+           </tr>
+
+           <tr>
+              <td colspan="2" class="rightA">Tax (5%)</td>
+              <td>
+                 <input type="text" name="salesTax" id="salesTax" size="10" readonly />
+              </td>
+           </tr>
+
+           <tr>
+              <td colspan="2" class="rightA">TOTAL</td>
+              <td>
+                 <input type="text" name="totalCost" id="totalCost" size="10" readonly />
+              </td>
+           </tr>
+        </table>
+        <input type="submit" id="buttonAdd" value="subscribe now" />
+       <td><input type="reset" name="reset" value="reset"></td>
+      </form>
+   </section>
+
+<br>
+
+<p style="text-align:center"><a href="gulya's_gym_empire.html" style="font-size:20px; color:red;">Go Back to Home Page</a></p>
+
+<p style="text-align:center"><a href="#top" style="font-size:20px; color:red;">Go Back to Top of the Page</a></p>
+
+<br>
+
+
+
+</body>
+</html>
+

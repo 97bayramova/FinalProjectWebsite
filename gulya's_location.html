@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+Final Project
+Author: Ejegul Bayramova
+Date: 5/10/2024
+Filename: gulya's_location.html
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- google fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" >
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" >
+
+<!-- font awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+<link href="gulya's_gym_empire.css" rel="stylesheet" >
+
+<title>Map of Gulya's Gym Empire</title>
+<style>
+    /* Style the map container */
+    #map {
+        height: 400px; /* Set the height of the map */
+        width: 100%; /* Set the width of the map */
+    }
+</style>
+</head>
+
+
+<body>
+
+
+<table border="2" cellpadding="6" style="text-align:center" width="100%";>
+
+<u><h1 style="text-align:center; color:#35d6ed; text-shadow: 2px 2px 2px red">Gulya's Gym Empire</h1></u></br>
+
+<table style="width:100%; border-top:10px solid black; border-bottom:10px solid black">
+	<tr >
+                <th><a href="gulya's_gym_empire.html" style="color:black;font-size:15px">Home</a></th>
+		<th><a href="gulya's_about.html" style="color:black;font-size:15px">About Us</a></th>
+		<th><a href="gulya's_location.html" style="color:black;font-size:15px">Location</a></th>
+		<th><a href="gulya's_membershipa.html" style="color:black;font-size:15px">Join Now</a></th>
+		<th><a href="gulya's_trainers.html" style="color:black;font-size:15px">Trainers</a></th>
+	</tr>
+			
+</table>
+<br/>
+<br/>
+
+
+<button onclick="navigateToLocation()" style="background-color: #000000;  
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;"><a href="https://www.google.com/maps?q=Gulya's+Gym+Empire+New+York+City" target="_blank" style="color: #35d6ed; text-decoration: none;">Click to View Gulya's Gym Empire location on Google Maps</a></button>
+
+
+
+<!-- JavaScript function to navigate to the location -->
+<script>
+function navigateToLocation() {
+    window.location.href = "https://www.google.com/maps?q=Gulya's+Gym+Empire+New+York+City";
+}
+</script>
+
+
+<br>
+
+<!-- Map container -->
+<iframe id="map"
+        width="600"
+        height="450"
+        frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2697386668463!2d-74.00270628458902!3d40.75359034323271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2590090d1f71d%3A0x5d9870f78647713e!2sThe%20Vessel!5e0!3m2!1sen!2sus!4v1640733786875!5m2!1sen!2sus" allowfullscreen>
+</iframe>
+
+<script src="script.js"></script>
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+<p style="text-align:center"><a href="gulya's_membershipa.html" style="font-size:20px; color:red;">Join Us Now</a></p>
+
+<p style="text-align:center"><a href="#top" style="font-size:20px; color:red;">Go Back to Top of the Page</a></p>
+
+<br>
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      Final Project
+
+      Author: Ejegul Bayramova
+      Date:   5/10/2024
+
+      Filename: gulya's_membershipb.html
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!-- google fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" >
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" >
+
+<!-- font awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+<link href="gulya's_gym_empire.css" rel="stylesheet" >
+   <title>Gulya's Gym Empire - Payment Form</title>
+   <link rel="stylesheet" href="gulya's_gym_membership.css" />
+   <script src="gulya's_membershipb.js" defer></script>
+
+  <style>
+      body {
+          background-color: black;
+          color: white; /* Adjust text color to contrast with the black background */
+          font-family: 'Poppins', sans-serif; /* Apply Google Font */
+      }
+
+      table {
+          width: 100%;
+          border-collapse: collapse;
+          border: 2px solid white; /* Add border to table */
+      }
+
+      caption {
+          font-size: 20px;
+          font-weight: bold;
+          color: red;
+          margin-bottom: 10px;
+      }
+
+      td, th {
+          padding: 10px;
+          border: 1px solid white; /* Adjust border color */
+      }
+
+      tr:nth-child(even) {
+          background-color: rgba(255, 255, 255, 0.1); /* Adjust the opacity to your preference */
+      }
+
+      tr:hover {
+          background-color: rgba(255, 255, 255, 0.3); /* Adjust the opacity to your preference */
+      }
+
+      .cardLabel {
+          display: block;
+          margin-bottom: 10px;
+      }
+
+      #footnote {
+          font-style: italic;
+          color: #ccc; /* Adjust footnote color */
+          margin-top: 10px;
+      }
+
+      #accountSection,
+      #paySection {
+          background-color: rgba(0, 0, 0, 0.7); /* Adjust the opacity to your preference */
+          padding: 20px;
+          margin: 20px;
+          border-radius: 10px;
+      }
+   </style>
+
+</head>
+
+
+
+
+<body>
+
+
+<u><h1 style="text-align:center; color:#35d6ed; text-shadow: 2px 2px 2px red">Gulya's Gym Empire</h1></u></br>
+
+
+<table style="width:100%; border-top:10px solid black; border-bottom:10px solid black">
+	<tr >
+                <th><a href="gulya's_gym_empire.html" style="color:black;font-size:15px">Home</a></th>
+		<th><a href="gulya's_about.html" style="color:black;font-size:15px">About Us</a></th>
+		<th><a href="gulya's_location.html" style="color:black;font-size:15px">Location</a></th>
+		<th><a href="gulya's_membershipa.html" style="color:black;font-size:15px">Join Now</a></th>
+		<th><a href="gulya's_trainers.html" style="color:black;font-size:15px">Trainers</a></th>
+	</tr>
+			
+</table>
+<br/>
+<br/>
+
+
+<table border="2" cellpadding="6" style="text-align:center" width="100%";>
+
+
+<h4 style="text-align:center;color:red; font-size:30px">Gym Membership Payment Form</h4>
+
+
+<br>
+
+
+
+
+
+<section id="accountSection">       
+   <table id="accountTable">
+      <caption>Membership Details</caption>
+      <tr>
+         <td>Membership Type:</td>
+         <td><span id="membershipType">Platinum ($44.99/month)</span></td>
+      </tr>
+      <tr>
+         <td>Duration:</td>
+         <td><span id="duration">3 Months</span></td>
+      </tr>
+      <tr>
+         <td>Membership Cost:</td>
+         <td><span id="membershipCost">$134.97</span></td>
+      </tr>
+      <tr>
+         <td>Optional (additional) Cost:</td>
+         <td><span id="optionCost">$19.95</span></td>
+      </tr>
+      <tr>
+         <td class="rightA">Subtotal:</td>
+         <td><span id="subtotal">$194.82</span></td>
+      </tr>
+      <tr>
+         <td class="rightA">Tax (5%):</td>
+         <td><span id="salesTax">$9.74</span></td>
+      </tr>
+      <tr>
+         <td class="rightA">TOTAL:</td>
+         <td><span id="totalCost">$204.56</span></td>
+      </tr>
+   </table>     
+</section>
+
+
+
+
+
+
+
+
+
+
+   
+   <section id="paySection">
+      <h1>Payment Form</h1>
+      
+
+      <form id="payment" name="payment" method="post" action="gulya's_payment.html" onsubmit="return Validation()">         
+         <fieldset id="creditcard">
+            <legend>Credit Information</legend>
+
+            <label for="cardName">Name*</label>
+            <input name="cardName" id="cardName" required type="text" />   <br>           
+
+            <label>Credit Card*</label>
+            <fieldset id="cards">
+               <label class="cardLabel">
+                  <input name="credit" value="amex" type="radio" required />               
+                  <span>American Express</span>
+               </label>
+               <label class="cardLabel">               
+                  <input name="credit" value="discover" type="radio" />
+                  <span>Discover</span>
+               </label>
+               <label class="cardLabel">                              
+                  <input name="credit" value="master" type="radio"  />
+                  <span>MasterCard</span>
+               </label>
+               <label class="cardLabel">                                    
+                  <input name="credit" value="visa" type="radio"  />
+                  <span>Visa</span>
+               </label>
+            </fieldset>          
+
+            <label for="cardNumber">Credit Card Number*</label>
+            <input name="cardNumber" id="cardNumber" required type="text"
+                   pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$"/>
+
+            <label for="expMonth">Expiration Date*</label>
+            <select id="expMonth" name="expMonth">
+               <option value="mm">mm</option>
+               <option value="01">01</option>
+               <option value="02">02</option>
+               <option value="03">03</option>
+               <option value="04">04</option>
+               <option value="05">05</option>
+               <option value="06">06</option>
+               <option value="07">07</option>
+               <option value="08">08</option>
+               <option value="09">09</option>
+               <option value="10">10</option>
+               <option value="11">11</option>
+               <option value="12">12</option>
+            </select>
+            <span id="separator"> / </span>
+            <select id="expYear" name="expYear">
+               <option value="yy">yy</option>
+               <option value="2022">2022</option>
+               <option value="2023">2023</option>
+               <option value="2024">2024</option>
+               <option value="2025">2025</option>
+               <option value="2026">2026</option>
+            </select>            
+
+            <label for="cvc">CVC*</label>
+            <input name="cvc" id="cvc" required pattern="^\d{3,4}$" type="text"/>
+         </fieldset>
+
+         <p id="footnote">* - Required Item</p>        
+         <input type="submit" id="subButton" value="Submit Payment" />         
+      </form>
+
+   </section>
+
+<br>
+
+<script>
+      // Function to update membership details
+      function updateMembershipDetails() {
+         // Retrieve input values
+         let membershipType = document.getElementById("membershipTypeInput").value;
+         let duration = document.getElementById("durationInput").value;
+         let membershipCost = document.getElementById("membershipCostInput").value;
+         let optionCost = document.getElementById("optionCostInput").value;
+         
+         // Update membership details
+         document.getElementById("membershipType").textContent = membershipType;
+         document.getElementById("duration").textContent = duration;
+         document.getElementById("membershipCost").textContent = "$" + membershipCost;
+         document.getElementById("optionCost").textContent = "$" + optionCost;
+         
+         // Calculate subtotal, tax, and total
+         var subtotal = pmembershipCost + optionCost;
+         var salesTax = subtotal * 0.05;
+         var totalCost = subtotal + salesTax;
+         
+         // Update subtotal, tax, and total
+         document.getElementById("subtotal").textContent = "$" + subtotal;
+         document.getElementById("salesTax").textContent = "$" + salesTax.toFixed(2);
+         document.getElementById("totalCost").textContent = "$" + totalCost.toFixed(2);
+      }
+      
+      // Listen for changes in input fields and update membership details
+      document.getElementById("membershipTypeInput").addEventListener("input", updateMembershipDetails);
+      document.getElementById("durationInput").addEventListener("input", updateMembershipDetails);
+      document.getElementById("membershipCostInput").addEventListener("input", updateMembershipDetails);
+      document.getElementById("optionCostInput").addEventListener("input", updateMembershipDetails);
+      
+      // Initial update when the page loads
+      updateMembershipDetails();
+   </script>
+
+<br>
+<p style="text-align:center"><a href="gulya's_gym_empire.html" style="font-size:20px; color:red;">Go Back to Home Page</a></p>
+
+
+<p style="text-align:center"><a href="#top" style="font-size:20px; color:red;">Go Back to Top of the Page</a></p>
+
+<br>
+
+
+
+</body>
+</html>
